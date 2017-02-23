@@ -1,0 +1,10 @@
+elasticsearch:
+    image: elasticsearch
+    environment:
+        - es.node.name="TestNode"
+    volumes:
+        - ./volumes/config:/usr/share/elasticsearch/config
+        - ./volumes/data:/usr/share/elasticsearch/data
+    ports:
+        - 9200:9200
+        - 9300:9300
